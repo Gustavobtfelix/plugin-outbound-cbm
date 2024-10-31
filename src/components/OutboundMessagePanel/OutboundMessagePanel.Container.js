@@ -52,9 +52,9 @@ const isToNumberValid = (toNumber) => {
 
 const OutboundMessagePanel = (props) => {
   // Local state
-  const [toNumber, setToNumber] = useState("+1");
+  const [toNumber, setToNumber] = useState("+55");
   const [messageBody, setMessageBody] = useState("");
-  const [messageType, setMessageType] = useState("sms");
+  const [messageType, setMessageType] = useState("whatsapp");
 
   // Redux state
   const isOutboundMessagePanelOpen = useFlexSelector(
@@ -72,7 +72,7 @@ const OutboundMessagePanel = (props) => {
 
   // if we navigate away clear state
   if (!isOutboundMessagePanelOpen) {
-    if (toNumber !== "+1") setToNumber("+1");
+    if (toNumber !== "+55") setToNumber("+55");
     if (messageBody.length) setMessageBody("");
     return null;
   }
@@ -107,9 +107,6 @@ const OutboundMessagePanel = (props) => {
                 }}
                 orientation="horizontal"
               >
-                <Radio id="sms" value="sms" name="sms">
-                  SMS
-                </Radio>
                 <Radio id="whatsapp" value="whatsapp" name="whatsapp">
                   Whatsapp
                 </Radio>

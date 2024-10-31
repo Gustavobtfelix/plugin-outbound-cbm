@@ -1,4 +1,5 @@
 import { Actions } from "@twilio/flex-ui";
+import { sendMessageAPI } from "../../actions/sendMessageAPI";
 export const handleClose = () => {
   Actions.invokeAction("ToggleOutboundMessagePanel");
 };
@@ -34,6 +35,7 @@ export const onSendClickHandler = (
       break;
   }
 
-  Actions.invokeAction("SendOutboundMessage", payload);
+  sendMessageAPI(payload);
+  // Actions.invokeAction("SendOutboundMessage", payload);
   Actions.invokeAction("ToggleOutboundMessagePanel");
 };
