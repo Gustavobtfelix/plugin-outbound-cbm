@@ -10,7 +10,7 @@ export const sendMessageAPI = async (sendOutboundParams) => {
   
   try {
     const response = await fetch(
-      'http://127.0.0.1:5000/call_to_action',
+      'https://foundation-stg.stone.com.br/cia-api-gentil/call_to_action',
       {
         method: 'POST',
         headers: {
@@ -36,13 +36,13 @@ export const sendMessageAPI = async (sendOutboundParams) => {
       });
     } else {
       console.error('Failed to send message:', response.statusText);
-      Notifications.showNotification("messageSendFailed", {
+      Notifications.showNotification("outboundMessageFailed", {
         message: 'Failed to send message.',
       });
     }
   } catch (error) {
     console.error('Error sending message:', error);
-    Notifications.showNotification("messageSendFailed", {
+    Notifications.showNotification("outboundMessageFailed", {
       message: 'An error occurred.',
     });
   }
