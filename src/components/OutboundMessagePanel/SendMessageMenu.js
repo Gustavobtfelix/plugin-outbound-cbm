@@ -12,10 +12,10 @@ const SendMessageMenu = (props) => {
   return (
     <>
       <MenuButton {...menu} variant="primary" disabled={props.disableSend}>
-        Send message.... <ChevronDownIcon decorative />
+        Enviar mensagem.... <ChevronDownIcon decorative />
       </MenuButton>
       <Menu {...menu} aria-label="Actions">
-        <MenuItem {...menu} onClick={() => props.onClickHandler("OPEN_CHAT")}>
+        {/* <MenuItem {...menu} onClick={() => props.onClickHandler("OPEN_CHAT")}>
           ....and open chat with customer
         </MenuItem>
         <MenuSeparator />
@@ -25,13 +25,12 @@ const SendMessageMenu = (props) => {
         >
           ....and open chat with customer when they reply (route reply to me)
         </MenuItem>
-        <MenuSeparator />
+        <MenuSeparator /> */}
         <MenuItem
           {...menu}
           onClick={() => props.onClickHandler("SEND_MESSAGE")}
         >
-          ....and open chat with customer when they reply (route reply to any
-          agent)
+          ....e abra uma conversa com o cliente quando ele responder (rota direciona para a fila que você pertence)
         </MenuItem>
       </Menu>
     </>

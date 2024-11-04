@@ -145,7 +145,7 @@ const OutboundMessagePanel = (props) => {
                 }}
                 id="message-body"
                 name="message-body"
-                placeholder="Type message"
+                placeholder="Digite a mensagem"
                 value={messageBody}
               />
               <SendMessageContainer theme={props.theme}>
@@ -166,7 +166,7 @@ const OutboundMessagePanel = (props) => {
               >
                 {templates.map((template) => (
                   <Option value={template} key={template}>
-                    {template || "Type message"}
+                    {template || "Escolha mensagem"}
                   </Option>
                 ))}
               </Select>
