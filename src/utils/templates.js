@@ -1,4 +1,4 @@
 export const templates = [
   "",
-  "Olá novamente! 👋 Estamos retomando nossos atendimentos.",
+  "Olá! Espero que esteja tudo bem contigo. Somos da equipe de suporte em tecnologia da Stone...",
 ];
